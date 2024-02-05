@@ -1,7 +1,6 @@
 import { SVGProps } from "react";
 
 export default function Card({ fill, ...props }: SVGProps<SVGSVGElement>) {
-  console.log(fill);
   const fillColor =
     fill === "green" ? "#48B7D3" : fill === "pink" ? "#F4B8C0" : "#FFB700";
   return (

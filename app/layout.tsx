@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${axiforma.className} container mx-auto`}>
+      <body
+        className={`${axiforma.className} max-w-[1440px] w-full mx-auto overflow-x-hidden`}
+      >
         <Header />
         <main className="flex min-h-screen flex-col items-center justify-between">
           {children}

@@ -13,8 +13,8 @@ const SectionThree: React.FC = () => {
             </span>
             <span> the app</span>
           </h2>
-          <div className="relative w-[293px] h-[60px]">
-            <Image fill src={"/store.png"} alt="" />
+          <div className="relative w-[250px] sm:w-[293px] h-[60px]">
+            <Image fill src={"/store.png"} objectFit="contain" alt="" />
           </div>
         </div>
       </div>
