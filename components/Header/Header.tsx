@@ -8,7 +8,7 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <header className="min-h-[585px] w-full bg-grid-lines bg-no-repeat bg-cover relative bg-center mb-[94px]">
+    <header className="min-h-[585px] w-full bg-grid-lines bg-no-repeat bg-cover relative bg-center mb-[104px]">
       <nav className="py-8 border-b-2 border-black1 px-[85px]">
         <div className="flex justify-between items-center">
           <Link href="/">
