@@ -1,8 +1,9 @@
 import Image from "next/image";
+import React from "react";
 
-const SectionTwo = () => {
+const SectionTwo: React.FC = () => {
   return (
-    <section className="flex items-center gap-[100px]">
+    <section className="flex items-center gap-[100px] mb-[85px]">
       <h2 className="text-[48px] text-black1 leading-[130%] font-semibold flex-grow">
         Paypeer App <br />
         <span className="text-opacity-[0.67] text-black1 inline-block">
