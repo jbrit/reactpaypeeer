@@ -4,7 +4,7 @@ import React from "react";
 
 const SectionOne: React.FC = () => {
   return (
-    <section className="flex flex-col gap-[75px] mb-117px">
+    <section className="flex flex-col gap-[75px] mb-[117px]">
       <h2 className="w-[474px] mx-auto relative text-[43px] text-black1 leading-[130%] font-semibold">
         What makes <br />
         Paypeer{" "}
@@ -15,7 +15,7 @@ const SectionOne: React.FC = () => {
           <SquigglyArrow />
         </div>
       </h2>
-      <ul className="list-none flex flex-wrap -mx-[17.5px]">
+      <ul className="list-none flex flex-wrap -mx-[35px]">
         {[
           {
             color: "green",
