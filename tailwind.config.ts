@@ -13,6 +13,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "grid-lines": "url(../public/Grid Lines.svg)",
+        "grid-lines-2": "url(../public/Grid Lines 2.svg)",
       },
       colors: {
         black1: "#1F1F1F",
