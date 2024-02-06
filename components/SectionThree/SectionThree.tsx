@@ -15,7 +15,10 @@ const SectionThree: React.FC = () => {
   }
 
   return (
-    <section className="flex items-center min-h-[450px] md:min-h-[536px] bg-grid-lines-2 bg-no-repeat bg-cover bg-center">
+    <section
+      id="section-three"
+      className="flex items-center min-h-[450px] md:min-h-[536px] bg-grid-lines-2 bg-no-repeat bg-cover bg-center"
+    >
       <Modal isOpen={isOpen} closeModal={closeModal} />
       <div className="flex-grow px-5">
         <div className="flex-col items-center justify-center max-w-[560px] mx-auto">

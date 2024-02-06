@@ -4,7 +4,10 @@ import React from "react";
 
 const SectionOne: React.FC = () => {
   return (
-    <section className="flex flex-col gap-[20px] md:gap-[75px] mb-[80px] md:mb-[117px] px-4">
+    <section
+      id="section-one"
+      className="flex flex-col gap-[20px] md:gap-[75px] mb-[80px] md:mb-[117px] px-4"
+    >
       <h2 className="text-center md:text-left md:w-[474px] mx-auto relative text-[32px] md:text-[43px] text-black1 leading-[130%] font-semibold">
         What makes <br className="hidden sm:block" />
         Paypeer{" "}

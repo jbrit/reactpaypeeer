@@ -20,6 +20,11 @@ const Header: React.FC = () => {
     setIsOpen(true);
   }
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <header className="min-h-[400px] md:min-h-[585px] w-full bg-grid-lines bg-no-repeat bg-cover relative bg-center mb-[104px]">
       <Modal isOpen={isOpen} closeModal={closeModal} />
@@ -38,14 +43,20 @@ const Header: React.FC = () => {
             <ul
               className={`list-none flex items-center gap-[20px] lg:gap-[42px] ${GTWalsheim.className}`}
             >
-              <li className="font-normal text-[20px] leading-[102.6%] text-black1 hover:font-bold">
-                <Link href="/">Home</Link>
+              <li className="font-normal text-[20px] leading-[102.6%] text-black1 hover:text-black">
+                <button onClick={() => scrollToSection("section-one")}>
+                  Home
+                </button>
               </li>
-              <li className="font-normal text-[20px] leading-[102.6%] text-black1 hover:font-bold">
-                <Link href="/">Explore</Link>
+              <li className="font-normal text-[20px] leading-[102.6%] text-black1 hover:text-black">
+                <button onClick={() => scrollToSection("section-two")}>
+                  Explore
+                </button>
               </li>
-              <li className="font-normal text-[20px] leading-[102.6%] text-black1 hover:font-bold">
-                <Link href="/">How it works?</Link>
+              <li className="font-normal text-[20px] leading-[102.6%] text-black1 hover:text-black">
+                <button onClick={() => scrollToSection("section-three")}>
+                  How it works?
+                </button>
               </li>
             </ul>
             <button
@@ -68,19 +79,34 @@ const Header: React.FC = () => {
           className={`list-none flex flex-col items-center gap-[20px] ${GTWalsheim.className}`}
         >
           <li className="font-medium text-[24px] leading-[102.6%] text-black1">
-            <Link onClick={() => setIsMenuOpen(false)} href="/">
+            <button
+              onClick={() => {
+                setIsMenuOpen(false);
+                scrollToSection("section-one");
+              }}
+            >
               Home
-            </Link>
+            </button>
           </li>
           <li className="font-medium text-[24px] leading-[102.6%] text-black1">
-            <Link onClick={() => setIsMenuOpen(false)} href="/">
+            <button
+              onClick={() => {
+                setIsMenuOpen(false);
+                scrollToSection("section-two");
+              }}
+            >
               Explore
-            </Link>
+            </button>
           </li>
           <li className="font-medium text-[24px] leading-[102.6%] text-black1">
-            <Link onClick={() => setIsMenuOpen(false)} href="/">
+            <button
+              onClick={() => {
+                setIsMenuOpen(false);
+                scrollToSection("section-three");
+              }}
+            >
               How it works?
-            </Link>
+            </button>
           </li>
         </ul>
         <button
