@@ -6,12 +6,23 @@ import TextCurve from "@/svg/text-curve";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Modal from "../Modal/Modal";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  let [isOpen, setIsOpen] = React.useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
 
   return (
     <header className="min-h-[400px] md:min-h-[585px] w-full bg-grid-lines bg-no-repeat bg-cover relative bg-center mb-[104px]">
+      <Modal isOpen={isOpen} closeModal={closeModal} />
       <nav className="py-4 lg:py-8 border-b-2 border-black1 px-6 lg:px-[40px] xl:px-[85px] relative">
         <div className="flex justify-between items-center">
           <Link href="/">
@@ -37,9 +48,12 @@ const Header: React.FC = () => {
                 <Link href="/">How it works?</Link>
               </li>
             </ul>
-            <div className="relative w-[203px] h-[60px] lg:w-[293px] lg:h-[60px]">
+            <button
+              onClick={openModal}
+              className="relative w-[203px] h-[60px] lg:w-[293px] lg:h-[60px]"
+            >
               <Image fill src={"/store.png"} objectFit="contain" alt="" />
-            </div>
+            </button>
           </div>
         </div>
       </nav>
@@ -69,9 +83,15 @@ const Header: React.FC = () => {
             </Link>
           </li>
         </ul>
-        <div className="relative w-[203px] h-[60px] lg:w-[293px] lg:h-[60px]">
+        <button
+          onClick={() => {
+            setIsMenuOpen(false);
+            openModal();
+          }}
+          className="relative w-[203px] h-[60px] lg:w-[293px] lg:h-[60px]"
+        >
           <Image fill src={"/store.png"} objectFit="contain" alt="" />
-        </div>
+        </button>
         <button
           onClick={() => setIsMenuOpen(false)}
           className={`block md:hidden text-lg uppercase font-bold text-black1 ${GTWalsheim.className} absolute right-4 top-6`}
