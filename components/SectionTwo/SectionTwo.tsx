@@ -13,12 +13,14 @@ const SectionTwo: React.FC = () => {
           Screenshots
         </span>
       </h2>
-      <div className="overflow-x-auto flex-grow min-w-[735px] flex justify-start gap-4">
-        {["swap", "card", "dashboard"].map((item) => (
-          <div key={item} className="relative w-[229px] h-[461px]">
-            <Image alt="" fill src={`/${item}.png`} />
-          </div>
-        ))}
+      <div className="overflow-x-auto min-w-[735px]">
+        <div className="flex justify-start gap-4">
+          {["swap", "card", "dashboard"].map((item) => (
+            <div key={item} className="relative w-[229px] h-[461px]">
+              <Image alt="" fill src={`/${item}.png`} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
